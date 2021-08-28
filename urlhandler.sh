@@ -24,4 +24,4 @@ fi
 
 #Otherwise send them an hURL; at least gophernicus can serve an HTML
 #page with a meta redirect, which is really fucking stupid.
-echo "h$TEXT\\tURL:$URL\\t$SERVER_HOST\\t$SERVER_PORT"
+echo -e "h$TEXT\\tURL:$URL\\t$SERVER_HOST\\t$SERVER_PORT"
