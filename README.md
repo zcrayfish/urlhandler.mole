@@ -2,7 +2,12 @@
 gopher mole for gophernicus to switch between hURL and type w depending on who's accessing a gopher menu
 
 # How to use
-In an executable gophermap, replace any `GET /`, `hURL` or gophertype `w` entries with the the script (it's named urlhandler.sh here on github, but I personally use urlhandler.mole on my own boxen)
+
+You can either put the urlhandler script somewhere in the $PATH on your system, or put it in the root directory of your gopher server.
+
+## In executable gophermaps
+
+In a gophermap, replace any `GET /`, `hURL` or gophertype `w` entries with the the script (it's named urlhandler.sh here on github, but I personally use urlhandler.mole on my own boxen)
 
 For example, on the root of my site, my IRC links look like this:
 
@@ -12,8 +17,11 @@ For example, on the root of my site, my IRC links look like this:
 
 `urlhandler.mole ircs://irc.tilde.chat:6697/gopher "irc.tilde.chat #gopher"`
 
-You can either put the urlhandler script somewhere in the $PATH on your system, or put it in the root directory of your gopher server.
+## In non-executable gophermaps
 
+It can be called with gophernicus' `=` directive... Here's an example in which the script is in the root directory of the gopher server, but being called from a directory two levels deep:
+
+`=../../urlhandler.mole "https://en.wikipedia.org/wiki/Gopher_(protocol)" "https://en.wikipedia.org/wiki/Gopher_(protocol)"`
 
 # Rationale
 
