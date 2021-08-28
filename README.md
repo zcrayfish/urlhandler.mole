@@ -19,7 +19,7 @@ For example, on the root of my site, my IRC links look like this:
 
 ## In non-executable gophermaps
 
-It can be called with gophernicus' `=` directive... Here's an example in which the script is in the root directory of the gopher server, but being called from a directory two levels deep:
+It can be called with gophernicus' `= subgophermap` directive... Here's an example in which the script is in the root directory of the gopher server, but being called from a directory two levels deep:
 
 `=../../urlhandler.mole "https://en.wikipedia.org/wiki/Gopher_(protocol)" "https://en.wikipedia.org/wiki/Gopher_(protocol)"`
 
