@@ -1,6 +1,22 @@
 # urlhandler.mole
 gopher mole for gophernicus to switch between hURL and type w depending on who's accessing a gopher menu
 
+# How to use
+In an executable gophermap, replace any `GET /`, `hURL` or gophertype `w` entries with the the script (it's named urlhandler.sh here on github, but I personally use urlhandler.mole on my own boxen)
+
+For example, on the root of my site, my IRC links look like this:
+
+`urlhandler.mole irc://irc.libera.chat:6667/gopher "irc.libera.chat #gopher"`
+
+`urlhandler.mole irc://irc.sdf.org:6667/gopher "irc.sdf.org #gopher"`
+
+`urlhandler.mole ircs://irc.tilde.chat:6697/gopher "irc.tilde.chat #gopher"`
+
+You can either put the urlhandler script somewhere in the $PATH on your system, or put it in the root directory of your gopher server.
+
+
+# Rationale
+
 This is a hack I created because I cannot stand the [hURL scheme](http://gopher.quux.org:70/Archives/Mailing%20Lists/gopher/gopher.2002-02%7C/MBOX-MESSAGE/34) that was bafflingly created in 2002... This despite that gophertype `w` has been in libwww, and some other gopher clients, since at least 1992.
 Unfortunately, some clients support one or the other, but none that I know of support both CORRECTLY. (invariably, clients I see that attempt to support both cannot load regular type `h` files on gopher, or have other severe issues, nearly always with hURL handling).
 
